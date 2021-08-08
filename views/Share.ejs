@@ -1,0 +1,30 @@
+<%-include('header')-%>
+    
+   
+    <div class="bg-blue pa3 w-100 mb3 ">
+        <div class="w-50 ma br3 pa3 bg-light-gray shadow-5  ">
+            <h2 class="o-70 f1 pa0 tc vd we2c">Upload your File Here</h2>
+            <form class=" w-100  " action="filetoupload" method="POST" enctype="multipart/form-data">
+                <input type="file" class="pa3 vd tc white  bg-purple mb4  pa4 br3 ml6 bn " id="file-input" name="filetoupload"></input>
+                <button type="submit" class="ml6 bt-dwn bg-blue white  bn vd br2   pa2" onclick="file">Upload File</button>
+            </form>
+          
+        </div>
+    </div>
+
+    <script>
+       function file(){
+            var file=document.getElementById('file-input').value;
+        if (file==""){
+            alert('Please Upload a File First')
+            console.log('Error')
+        }
+        else{
+            alert("file Upload Sucess")
+        }
+       
+    }
+    </script>
+    
+</body>
+</html>

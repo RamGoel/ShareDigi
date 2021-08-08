@@ -1,0 +1,13 @@
+
+   <%-include('header')-%>
+
+   <form method="POST" action="/mail" class="bg-light-gray pa2 br3 mt2 w-50 mla mra">
+    <h3 class="vd tc b f4 o-80 mt5">Do u want to Mail the download link?</h3>
+    <div class="w-100  pa2 flex-column justify-center" >
+        <input class="br3 bn vd pa2  w-90 tc mb2" name="receiver" placeholder="Enter Receiver Email">
+        <input class="br3 bn vd pa2  w-90 tc mb4 " name="sender" placeholder="Enter Sender Email">
+        <input class="br3 bn vd pa2  w-90 tc mb4 " name="link" placeholder="Enter Link">
+        <input type="submit" placeholder="Submit" class=" ml7 btn-sub bg-red white  bn vd br2  mt3 pa2">
+    </div>
+</form>
+   <%-include('footer')-%>

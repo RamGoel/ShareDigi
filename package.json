@@ -1,0 +1,29 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "alert": "^5.0.10",
+    "body-parser": "^1.19.0",
+    "content-type": "^1.0.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "html": "^1.0.0",
+    "limit": "0.0.1",
+    "math": "^0.0.3",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
+    "popups": "^1.1.3",
+    "random": "^3.0.6",
+    "raw-body": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

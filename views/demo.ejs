@@ -1,0 +1,30 @@
+
+
+
+
+ var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'lovereact042@gmail.com',
+      pass: 'apurvgoyalhumai'
+    }
+  });
+
+  var mailOptions = {
+    from: 'rgoel766@gmail.com',
+    to: receiver,
+    subject: sender + 'is sending Email by ShareDigi',
+    text: 'This link has been shared with you'+ ,
+  };
+
+
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  }); 
+
+
+

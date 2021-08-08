@@ -1,0 +1,44 @@
+.head-main{
+    letter-spacing: 5px;
+
+}
+
+.header{
+   justify-content: space-between; 
+}
+.link-div{
+    width: max-content;
+    padding-left: 20px ;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.we2c{
+    font-family: 'Indie Flower', cursive;
+}
+.ls-5{
+    letter-spacing: 10px;
+
+}
+
+.bt-dwn{
+    width: 100px;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.btn-sub{
+    text-decoration: none;
+}
+.ma{
+    margin: auto;
+}
+
+.em-fm{
+    padding: auto;
+}
+
+.dcn{
+    text-decoration: none;
+}
+

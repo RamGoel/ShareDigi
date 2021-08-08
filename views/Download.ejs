@@ -1,0 +1,27 @@
+<%-include('header')-%>
+
+    <div class="pa0 vd ma pt1 tc link-div bg-light-gray shadow-5 br3">
+
+        <h2 class="tc vd pa2 we2c"><%= title%></h2>
+
+         <%= link %>
+    </div>
+
+
+    <div class="bg-blue pa4 w-100">
+        <h2 class="tc vd white pa1 f2 ls-3 we2c ">Download the File</h2>
+        <form class="w-50 ma br3 pa4 bg-light-gray shadow-5   " method="POST" action="/download">
+            <input class=" w-100 mb4 f5  tc pa2  vd" name="link" type="text" placeholder="Enter Link here" ></input>
+            <input type="submit" placeholder="Submit" class=" ml7 btn-sub bg-red white  bn vd br2  mt3 pa2 shadow-5">
+            
+            
+
+        </form>
+
+       
+        
+    </div>
+
+    <p class="tc o-80 b ls-5 white vd">Loved by 1Lakh+ Users</p>
+
+    <%-include('footer')-%>
