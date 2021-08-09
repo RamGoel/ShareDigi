@@ -71,7 +71,6 @@ app.post('/filetoupload', (req, res) => {
       var newpath = path.join(__dirname+ '/stored/', files.filetoupload.name);
       fs.rename(oldpath, newpath, (err) => {
         urlname = req.hostname + ':3000/' + 'download/' + files.filetoupload.name;
-        if (err) throw err;
         console.log('DD')
         res.render('Download', {link:  urlname, title: " Your Link is Ready"})
 
