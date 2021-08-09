@@ -39,7 +39,7 @@ app.post('/download', (req, res) => {
   } else {
     var lnk = req.body.link.split('/').pop().trim();
     console.log(lnk);
-     res.download(path.join(__dirname+ "../", lnk))
+     res.download(path.join(__dirname+ "/", lnk))
      
     
     
