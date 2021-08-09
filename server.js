@@ -9,6 +9,7 @@ const contentType=require('content-type')
 const ejs = require('ejs')
 const alert = require('alert');
 const bodyParser = require('body-parser');
+const port=  process.env.PORT || 3000;
 
 const {
   type
@@ -131,6 +132,6 @@ app.get('/download/:uid', (req, res) => {
   var url = String(req.params.uid)
   res.download(path.join(__dirname+'/stored/', url))
 })
-app.listen(3000, (req, res) => {
-  console.log('App listening on port 3000!');
+app.listen(port, (req, res) => {
+  console.log(`App listening on port ${port}`);
 });
