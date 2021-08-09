@@ -68,10 +68,11 @@ app.post('/filetoupload', (req, res) => {
     form.parse(req, (err, fields, files) => {
       
       var oldpath = files.filetoupload.path;
-      var newpath = path.join(__dirname +"/"+ files.filetoupload.name);
+      var newpath = path.join(__dirname +"/app/", files.filetoupload.name);
+      console.log(newpath)
       fs.rename(oldpath, newpath, (err) => {
         urlname = req.hostname + '/stored/' + files.filetoupload.name;
-        console.log('DD')
+        console.log(urlname)
         res.render('Download', {link:  urlname, title: " Your Link is Ready"})
 
       })
