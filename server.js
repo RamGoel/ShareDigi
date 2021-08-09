@@ -35,7 +35,7 @@ app.set('view engine', 'ejs');
 
 app.post('/download', (req, res) => {
   if (req.body.link == "") {
-    res.sendStatus(404);
+    res.send("file not found");;
   } else {
     var lnk = req.body.link.split('/').pop().trim();
     console.log(lnk);
