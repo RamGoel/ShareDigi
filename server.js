@@ -129,7 +129,7 @@ app.post('/mail', (req, res) => {
 app.get('/stored/:uid', (req, res) => {
 
   var url = String(req.params.uid)
-  res.download(path.join(__dirname+'/stored/', url))
+  res.download( url)
 })
 app.listen(port, (req, res) => {
   console.log(`App listening on port ${port}`);
