@@ -39,7 +39,7 @@ app.post('/download', (req, res) => {
   } else {
     var lnk = req.body.link.split('/').pop().trim();
     console.log(lnk);
-     res.download(path.join(__dirname, lnk))
+     res.download(path.join(__dirname+"/", lnk))
      
     
     
@@ -68,7 +68,7 @@ app.post('/filetoupload', (req, res) => {
     form.parse(req, (err, fields, files) => {
       
       var oldpath = files.filetoupload.path;
-      var newpath = path.join(__dirname , files.filetoupload.name);
+      var newpath = path.join(__dirname +"/"+, files.filetoupload.name);
       fs.rename(oldpath, newpath, (err) => {
         urlname = req.hostname + '/stored/' + files.filetoupload.name;
         console.log('DD')
