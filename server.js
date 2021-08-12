@@ -64,19 +64,19 @@ app.get('/share', (req, res) => {
 //FileUpload Endpoint
 app.post('/filetoupload', (req, res) => {
   
-    var form = formidable.IncomingForm();
+    var form = formidable.IncomingForm(); //parsing file
 
     form.parse(req, (err, fields, files) => {
       
       var oldpath = files.filetoupload.path;
-      var newpath = path.join(__dirname +"/app/", files.filetoupload.name);
+      var newpath = path.join(__dirname +"/app/", files.filetoupload.name); //declaring paths
       console.log(newpath)
-      fs.rename(oldpath, newpath, (err) => {
+      fs.rename(oldpath, newpath, (err) => {  //changing location of file from temp to folder
         
         
         urlname = req.hostname + '/stored/' + files.filetoupload.name;
         console.log(urlname)
-        res.render('Download', {link:  urlname, title: " Your Link is Ready"})
+        res.render('Download', {link:  urlname, title: " Your Link is Ready"}) //giving response to End-user
 
       })
    
